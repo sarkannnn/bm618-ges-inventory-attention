@@ -1,0 +1,9 @@
+fark (A − B),tesis_dengeli_MAE_farki,aralik_alt,aralik_ust,sifiri_icerir
+D2_esit_agirlik − D2_ref_adim7,8.83,-1.64,20.23,True
+D3_konumsuz − D3_ref_adim7,-4.63,-10.81,1.54,True
+D3_yilsiz − D3_ref_adim7,0.66,-7.93,8.81,True
+D2_esit_agirlik − D2_kontrol,8.83,-1.64,20.23,True
+D3_konumsuz − D3_kontrol,-4.63,-10.81,1.54,True
+D3_yilsiz − D3_kontrol,0.66,-7.93,8.81,True
+D2_kontrol − D2_ref_adim7,0.0,-0.0,0.0,True
+D3_kontrol − D3_ref_adim7,-0.0,-0.0,0.0,True

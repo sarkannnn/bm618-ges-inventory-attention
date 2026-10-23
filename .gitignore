@@ -1,0 +1,35 @@
+# ==============================================================================
+# BM618: Az Verili GES Envanterinde Attention, Transformer ve Kanıta Dayalı LLM
+# Git Ignore Konfiqurasiyası
+# ==============================================================================
+
+# Word sənədləri və müəllim qeydləri
+*.docx
+*.doc
+docs/*.docx
+docs/*.doc
+
+# Python bytecode, keş və ilkləndirmə
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual mühitlər və ətraf mühit faylları
+.env
+.env.*
+.venv/
+venv/
+ENV/
+env/
+
+# Müvəqqəti və eksperimental yoxlama skriptləri
+scratch/
+
+# Əməliyyat sistemi və redaktor faylları
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

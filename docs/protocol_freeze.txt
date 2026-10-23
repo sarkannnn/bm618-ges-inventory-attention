@@ -1,0 +1,298 @@
+================================================================================
+BM618: AZ VERİLİ GES ENVANTERİNDE ATTENTION, TRANSFORMER VE KANITA DAYALI LLM
+RESMİ PROTOKOL VE BÖLME DONDURMA BELGESİ (PROTOCOL FREEZE MANIFEST)
+================================================================================
+
+Dondurma Zamanı (UTC): 2026-10-23T07:18:54.742748+00:00
+Dondurulan Sürüm: 1.0 (Kilitli / Frozen)
+Bağlayıcı İlke: Model eğitiminden önce bölme manifestosu, hipotezler ve metrikler
+resmi olarak dondurulmuştur. Dış test puanına bakarak model, epoch veya
+hiperparametre seçimi KESİNLİKLE YAPILAMAZ. Bu dosyalar değişirse yeni sürüm
+numarası ve yazılı gerekçe zorunludur.
+
+DOSYA SHA-256 SAĞLAMA ÖZETLERİ:
+--------------------------------------------------------------------------------
+Dosya: data/splits.csv
+SHA-256: 96dab194b6a01d1c9c4658f5ac4d40456794f8e8202048b7841bcd11f4a23b81
+Kayıt Sayısı: 765 satır (5 dış kat x 153 envanter kaydı)
+Grup Sayısı: 76 benzersiz entity_group_id
+
+Dosya: docs/protokol.md
+SHA-256: 71cbf8c4214f13a849b1432da214cd6a3c8b8271cc14504b699d149aaad43a7a
+İçerik: Veri sözlüğü, girdi sözleşmesi, eşleştirme kuralları, H1-H4 hipotezleri,
+        metrikler, bootstrap protokolü, hiperparametre bütçesi ve kısıtlar.
+================================================================================
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.1 FREEZE UPDATE)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T07:30:37.237806+00:00
+Sürüm: 1.1 (Kilitli / Frozen)
+Güncelleme Gerekçesi:
+1. data/splits.csv kayıt başına tek satır (153 satır) biçimine getirildi:
+   record_id, entity_group_id, outer_test_fold, in_main_regression
+2. İç katlar data/inner_splits.csv (612 satır) olarak ayrıştırıldı:
+   outer_fold, record_id, inner_fold (yalnızca dış eğitim kayıtları)
+3. Kat atamalarının v1.0 ile %100 özdeş olduğu doğrulandı (0 fark).
+4. H1, H3 ve H4 hipotez yanlışlama ölçütleri katılaştırılarak güncellendi:
+   - H1: D3 MAE hem B1 hem D1'den düşük olmalı ve bootstrap %95 aralığı sıfırı içermemeli.
+   - H3: Yalnız toplama/sayım/karşılaştırma sorularında doğru yanıt oranı ile sınanır.
+   - H4: D3-D3_no_year MAE farkı bootstrap %95 aralığı sıfırı dışlıyorsa reddedilir (p-değeri yok).
+
+DOSYA SHA-256 SAĞLAMA ÖZETLERİ (v1.1):
+--------------------------------------------------------------------------------
+Dosya: data/splits.csv
+SHA-256: 99bd8090449f359cc75cab57ee9e41dfe115df07e9898277c4d204444fdbecad
+Kayıt Sayısı: 153 satır (kayıt başına tek satır)
+Grup Sayısı: 76 benzersiz entity_group_id
+
+Dosya: data/inner_splits.csv
+SHA-256: 0955631279efebcaf51ab56d8235af7f647217c601b381d2e267b1e7825f799f
+Kayıt Sayısı: 612 satır (5 dış kat x ~122 dış eğitim kaydı)
+
+Dosya: docs/protokol.md
+SHA-256: c263aa15dc4bfb9b089c0f8f4f28ec9e4d40cba24c763d46ab39b21be13d4bfb
+İçerik: Dondurulmuş Protokol v1.1 metni
+================================================================================
+
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.2 FREEZE UPDATE)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T08:05:25.434735+00:00
+Sürüm: 1.2 (Kilitli / Frozen)
+Güncelleme Gerekçesi:
+1. Derin öğrenme modelleri (D1, D2, D3) için optimizasyon kuralları kilitlendi:
+   AdamW (weight_decay=1e-4), batch=16, kayıp MSE (log1p hedefi), max 150 epoch, patience=15.
+2. Erken durdurma ve model seçimi ölçütü iç doğrulamada Tesis Dengeli MAE (kWp, ters dönüşümle) olarak sabitlendi.
+3. Epoch taşıma kuralı donduruldu: 3 iç fold doğrulamadaki en iyi epoch sayılarının ortalaması (yuvarlanmış).
+4. Tohum kuralları sabitlendi: İç arama tohumu 42, dış modeller 17, 42, 2026.
+5. Konum embedding'i yalnız D3'te (öğrenilen embedding); D1 ve D2'de konum embedding'i yok.
+6. Ortak regresyon başlığı: Linear(32,32) -> ReLU -> Dropout -> Linear(32,1) tüm D1-D3'te aynı.
+
+DOSYA SHA-256 SÜZLEME ÖZETLERİ (v1.2):
+--------------------------------------------------------------------------------
+Dosya: docs/protokol.md
+SHA-256: 242d2954d0c738aa45e31996e4867a7d688375dbcf516a66546f0549d7790193
+İçerik: Dondurulmuş Protokol v1.2 metni (D1-D3 mimari ve eğitim şartnamesi)
+================================================================================
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.2.1 FREEZE UPDATE - D3 KONUM EMBEDDING KARARI)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T08:12:47.089204+00:00
+Sürüm: 1.2.1 (Kilitli / Frozen)
+Güncelleme Gerekçesi:
+D3 konum embedding tablosu boyutu tüm dış ve iç katlarda sabit 64 x 32 (2.048 parametre) olarak donduruldu.
+Parametre raporunda toplam parametre sayısı ile fiilen kullanılan dizilerin uzunluğuna (L_used) göre
+etkin parametre sayısının (L_used x 32) ayrı ayrı raporlanması kuralı eklendi.
+
+DOSYA SHA-256 SÜZLEME ÖZETLERİ (v1.2.1):
+--------------------------------------------------------------------------------
+Dosya: docs/protokol.md
+SHA-256: 7bb182fdc65fe3cdc868ef7a91d1bfe5be7bccd2b8c72023c13161d3a9d78333
+İçerik: Dondurulmuş Protokol v1.2.1 metni (D3 sabit 64x32 konum embedding kararı)
+================================================================================
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.2.2 FREEZE UPDATE - SAPMA VE DÜZELTME KAYDI)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T08:50:01.719219+00:00
+Sürüm: 1.2.2 (Kilitli / Frozen)
+Sapma ve Düzeltme Özeti:
+1. Hata Tespiti: Adım 7 v1 uygulamasında model ağırlık ilklendirmesi tohuma bağlanmadan önce
+   model nesnesi oluşturulmuş, yalnızca DataLoader karıştırması tohumlanmıştı.
+2. Düzeltme: Protokol v1.2 Madde 4 kuralı gereğince torch.manual_seed(seed) ve np.random.seed(seed)
+   çağrıları hem iç aramada (tohum 42) hem dış eğitimde (tohum 17, 42, 2026) model nesnesi
+   oluşturulmadan ÖNCE çağrılacak şekilde düzeltildi.
+3. Model Ağırlıkları: Dış eğitilen tüm modeller results/weights/ altına kaydedilerek attention
+   analizinin doğrudan bu modeller üzerinden yürütülmesi sağlandı.
+4. Kısıtlar: Hiçbir hiperparametre ızgarası, seçim ölçütü, epoch kuralı veya dış bölme DEĞİŞMEMİŞTİR.
+5. Veri Bütünlüğü: Eski hatalı sonuçlar results/v1_hatali_ilklendirme/ altına arşivlenmiştir.
+
+DOSYA SHA-256 SAĞLAMA ÖZETLERİ (v1.2.2):
+--------------------------------------------------------------------------------
+Dosya: docs/protokol.md
+SHA-256: 51113dbd25cb12218be4940f9e82ed96e8dad7a73f4f8adf1b9129f8eda65bfa
+İçerik: Dondurulmuş Protokol v1.2.2 metni (ilklendirme tohumu düzeltmesi ve sapma kaydı)
+================================================================================
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.3 FREEZE UPDATE - ALTIN TEST SETİ DONDURULMASI)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T10:35:00.000000+00:00
+Sürüm: 1.3 (Kilitli / Frozen)
+Bağlayıcı İlke: test soruları prompt ve k seçiminden önce kilitlendi.
+Dış test sorularına bakarak sistem promptu veya k değeri seçimi KESİNLİKLE YAPILAMAZ.
+
+GÜNCELLEME VE KİLİTLEME AYRINTILARI:
+1. Bilgi Tabanı: data/kb_docs.jsonl (153 belge, 76 tesis grubu).
+   - Tüm ham ve temiz alanlar, dosya, sayfa, satır ve güç bilgileri standartlaştırıldı.
+   - 2024 Çekmeköy Ömerli İtfaiye çifti (REC_2024_R13, REC_2024_R15) dahil edildi ve
+     çelişki etiketiyle işaretlendi. Bu bilgi tabanı ana regresyon ortamından ayrıdır.
+2. Altın Soru Seti: data/gold_questions.jsonl (toplam 30 soru: 10 dev, 20 test).
+   - Dağılım: 9 tekil (3 dev, 6 test), 9 toplama (3 dev, 6 test),
+              6 çelişki (2 dev, 4 test), 6 yanıtlanamaz (2 dev, 4 test).
+   - Altın yanıtlar elle yazılmamış; pandas veri çerçevesi üzerinden programatik hesaplanmıştır.
+   - Yanıtlanamaz sorularda altın yanıt istisnasız "ÇEKİMSER" olarak tanımlanmıştır.
+
+TEST SORULARI (20 ADET) VE VERİ DOSYALARI SHA-256 SAĞLAMA ÖZETLERİ:
+--------------------------------------------------------------------------------
+Dosya: data/gold_questions.jsonl (Yalnızca 20 Test Sorusu - Kanonik JSON)
+SHA-256: 0a3ab8f5ffa51c6a769cd5e6a8ddeb494f2d84cae864b1890235101324d35306
+Kayıt Sayısı: 20 soru (6 tekil, 6 toplama, 4 çelişki, 4 yanıtlanamaz)
+
+Dosya: data/gold_questions.jsonl (Yalnızca 20 Test Sorusu - Ham Satırlar)
+SHA-256: dead971d1f3ec6c865786a7f086d20a0d4d27a9e43a04623b8e3d5e44f889e54
+
+Dosya: data/gold_questions.jsonl (Tüm Dosya - 30 Soru)
+SHA-256: 6c4379929053c603d1aa752661ce7e6848a70b8aa2b833938096091978d826e7
+
+Dosya: data/kb_docs.jsonl (Bilgi Tabanı Belgeleri)
+SHA-256: a9e7f094e7c2b2fb2723dd43ad4b7a03cbdfe7c6cbb2e75176ceb8de7bb5f887
+Kayıt Sayısı: 153 belge
+================================================================================
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.3.1 FREEZE UPDATE - SORU DİLİ VE ÇELİŞKİ İZOLASYONU)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T10:41:02.599033+00:00
+Sürüm: 1.3.1 (Kilitli / Frozen)
+Bağlayıcı İlke: test soruları prompt ve k seçiminden önce kilitlendi. Dış test sonuçları görülmeden güncellendi.
+
+GÜNCELLEME GEREKÇELERİ:
+1. Soru İfadesi Düzeltmesi (Protokol v1.1 Madde 7 Uyumu):
+   Dosya yılı kurulum tarihi olmadığından tüm sorulardaki "kurulan / kurulumu tamamlanan / devreye alınan"
+   ifadeleri "X dosyasında kayıtlı" ifadesiyle değiştirilmiştir.
+2. Çelişki Ayrıştırması ve İzolasyon:
+   - Q07 (dev) sorusu ile Q26 (test) sorusu aynı olguyu (Ömerli) sorguladığından, geliştirme kümesinde
+     Ömerli kaydı bırakılmamış; Q07 sorusu 2025 dosyasındaki İPA / Florya çoklu ve çelişkili kaydı
+     (REC_2025_R11: 20.0 kWp Aktif vs REC_2025_R14: 7.0 kWp Aktif-Pasif) ile değiştirilmiştir.
+   - Ömerli 2024 güç çelişkisi (REC_2024_R13: 29 kWp vs REC_2024_R15: 25 kWp) yalnızca dış test kümesinde
+     (Q26) korunmuştur.
+3. Çelişki Tanımı ve 6/6/4/4 Test Dağılımı:
+   - Çelişki tanımı (aynı tesis-yıl çoklu/farklı kayıt veya aynı tesis farklı ilçe/ad/durum) netleştirilmiş;
+     Q24 (Ataşehir İtfaiye: 2024 '(Aktif / Pasif)' vs 2025 'Pasif' durum çelişkisi) ve
+     Q25 (Başakşehir İtfaiye: 2023 25.0 kWp Aktif vs 2025 33.0 kWp 'Aktif - Pasif' güç ve durum çelişkisi)
+     yapısal çelişki olarak korunarak test setinde 6 tekil, 6 toplama, 4 çelişki, 4 yanıtlanamaz dağılımı
+     kesin olarak muhafaza edilmiştir.
+4. Yanıtlanamazlık İlçe-Yıl Yokluk Doğrulaması:
+   - Q09 (2021 Kadıköy), Q10 (2023 Beşiktaş) ve Q29 (2024 Adalar) sorularında belirtilen ilçe ve yıl
+     kombinasyonlarının kb_docs içinde 0 kayda sahip olduğu kodla test edilmiş ve doğrulanmıştır.
+
+KİLİTLEYİCİ SAĞLAMA ÖZETLERİ (v1.3.1):
+--------------------------------------------------------------------------------
+Dosya: data/gold_questions.jsonl (Tüm Dosya - 30 Soru) [KİLİTLEYİCİ HASH]
+SHA-256: 735f46d4513c0451fd065030abbc2f2ebf4f29c9ab1d5cdf5c20cffccd46f501
+Kayıt Sayısı: 30 soru (10 dev, 20 test)
+
+Dosya: data/gold_questions.jsonl (Yalnızca 20 Test Sorusu - Kanonik JSON)
+SHA-256: d503e371a861f6aa787cf67a16c5b15f972ad04a079ea54f91b6b78cf9bba480
+Kayıt Sayısı: 20 test sorusu (6 tekil, 6 toplama, 4 çelişki, 4 yanıtlanamaz)
+
+Dosya: data/kb_docs.jsonl (Bilgi Tabanı Belgeleri)
+SHA-256: a9e7f094e7c2b2fb2723dd43ad4b7a03cbdfe7c6cbb2e75176ceb8de7bb5f887
+Kayıt Sayısı: 153 belge
+================================================================================
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.3.2 FREEZE UPDATE - ÇELİŞKİ TANIMI VE DOĞRULAMA)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T10:50:27.572623+00:00
+Sürüm: 1.3.2 (Kilitli / Frozen)
+Bağlayıcı İlke: test soruları prompt ve k seçiminden önce kilitlendi. Dış test sonuçları görülmeden güncellendi.
+
+GÜNCELLEME GEREKÇELERİ:
+1. Çelişki Tanımının Katılaştırılması ve Tesis İzolasyonu:
+   - Şablon metni (Aktif / Pasif) veya olağan yıllar arası kapasite artışları çelişki kapsamından
+     kesin olarak çıkarılmıştır.
+   - Çelişki (conflict) kategorileri 3 ampirik duruma bağlanmıştır:
+     (a) Aynı tesis-yıl çifti (Ömerli 2024; Başakşehir Engelliler Merkezi 2022).
+     (b) İlçe/kurum adı değişimi (Kumburgaz İtfaiye; Ataköy yerleşkesi).
+     (c) Ham dosyalarda aynı tesisin çelişkili / azalan güç değeri (Florya 2022-2024; Yakacık İtfaiye 2024-2025).
+   - Q07 (dev) sorusu Ataköy yerleşkesine devredilerek Florya kaydı geliştirme setinden tamamen çıkarılmış,
+     yalnızca test setinde (Q23) tutulmuştur.
+   - Q24 sorusu Başakşehir Engelliler Merkezi 2022 dosyası aynı tesis-yıl çiftine (1. Etap 99 kWp vs 2. Etap 80 kWp),
+     Q25 sorusu Kartal Yakacık İtfaiye resmi kayıtlarda azalan güç çelişkisine (2024'te 33 kWp vs 2025'te 29 kWp)
+     bağlanarak 6/6/4/4 test dağılımı korunmuştur.
+2. Q06 Sorusunda Ham İlçe Sütunu Açıklığı:
+   - Silivri Kapı Buz Pisti kaydının 2022 ham Excel dosyasında 2. sütunda ('İlçe') 'Fatih' yazdığı
+     bağımsız openpyxl incelemesiyle teyit edilmiş; soru metnine 'ilçe sütununda Fatih yazan' kaydı eklenmiştir.
+3. Ham Excel Doğrulamasının Genişletilmesi:
+   - verify_raw_excel.py betiği 4 toplama, 6 tekil test ve 4 çelişki test sorusunun ham Excel satır ve
+     hücre koordinatlarını bağımsız olarak doğrulayacak şekilde genişletilmiştir.
+
+KİLİTLEYİCİ SAĞLAMA ÖZETLERİ (v1.3.2):
+--------------------------------------------------------------------------------
+Dosya: data/gold_questions.jsonl (Tüm Dosya - 30 Soru) [KİLİTLEYİCİ HASH]
+SHA-256: 774fd3f38351997c37030cca4b812994ab04dcd32b90295a41284b492f042f67
+Kayıt Sayısı: 30 soru (10 dev, 20 test)
+
+Dosya: data/gold_questions.jsonl (Yalnızca 20 Test Sorusu - Kanonik JSON)
+SHA-256: 88ccc870b8bf09840814de57ff2aded53b9bb7e3a861a9bad52e8f822dbc0537
+Kayıt Sayısı: 20 test sorusu (6 tekil, 6 toplama, 4 çelişki, 4 yanıtlanamaz)
+
+Dosya: data/kb_docs.jsonl (Bilgi Tabanı Belgeleri)
+SHA-256: a9e7f094e7c2b2fb2723dd43ad4b7a03cbdfe7c6cbb2e75176ceb8de7bb5f887
+Kayıt Sayısı: 153 belge
+================================================================================
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.3.3 FREEZE UPDATE - ÇELİŞKİ NETLEŞTİRMESİ VE TEST 7/6/3/4 DAĞILIMI)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T10:57:41.193385+00:00
+Sürüm: 1.3.3 (Kilitli / Frozen)
+Bağlayıcı İlke: Çelişki tanımı soru yazımından sonra netleştirildi, LLM çalıştırılmadan önce donduruldu.
+Dış test sonuçları görülmeden güncellendi ve kilitlendi.
+
+GÜNCELLEME GEREKÇELERİ:
+1. Q24'ün Tekil Soruya Dönüştürülmesi:
+   - Başakşehir Engelliler Merkezi 1. Etap ve 2. Etap kayıtlarının aynı tesisin çelişkili iki kaydı değil,
+     bağımsız iki alt birim / etap olduğu tespit edilmiştir.
+   - Veride protokoldeki saf çelişki tanımına (aynı tesis-yıl çoklu kayıt, ilçe/kurum adı değişimi, azalan güç)
+     uyan başka bağımsız test çelişkisi bulunmadığından Q24 "tekil" soru tipine dönüştürülmüştür
+     (2022 dosyasında Başakşehir Engelliler Merkezi 1. Etap GES kurulu gücü: 99.0 kWp).
+2. Test Seti Dağılımının 7/6/3/4 Olarak Dondurulması:
+   - Veri setinde yeterli sayıda saf çelişki olmaması nedeniyle test kümesi dağılımı:
+     7 tekil, 6 toplama, 3 çelişki, 4 yanıtlanamaz (toplam 20 test sorusu) olarak protokole yazılmış
+     ve dondurulmuştur. (Geliştirme kümesi: 3 tekil, 3 toplama, 2 çelişki, 2 yanıtlanamaz; toplam 10 soru).
+3. Q07 (Dev, Ataköy) Sorusunun Netleştirilmesi:
+   - Q07 sorusunda güç artışı bir çelişki olarak sunulmaktan çıkarılmış, yalnızca kurum adı değişimi
+     (2022 'İBB Ataköy Kadın ve Aile Hizmetleri Müdürlüğü GES' -> 2025 'Ataköy Sosyal Hizmetler Daire Başkanlığı Bina Çatısı Güneş Enerji Santrali')
+     sorgulanacak şekilde altın yanıt düzeltilmiştir.
+4. Bağımsız Ham Excel ve Otomatik Test Güncellemeleri:
+   - verify_raw_excel.py betiği 7 tekil test sorusu (Q24 dahil) ve 3 çelişki test sorusu (Q23, Q25, Q26)
+     ile güncellenerek ham Excel dosyaları üzerinden tam başarıyla doğrulanmıştır.
+   - tests/test_gold.py içindeki test_b_tur_dagilimi testi 10 tekil, 9 toplama, 5 çelişki, 6 yanıtlanamaz
+     toplam ve 7/6/3/4 test dağılımını doğrulayacak şekilde güncellenmiştir.
+
+KİLİTLEYİCİ SAĞLAMA ÖZETLERİ (v1.3.3):
+--------------------------------------------------------------------------------
+Dosya: data/gold_questions.jsonl (Tüm Dosya - 30 Soru) [KİLİTLEYİCİ HASH]
+SHA-256: 1ae296e07bf38cdbc024063f56cf81afcdf0c7517914ca2a9206345bc85083fd
+Kayıt Sayısı: 30 soru (10 dev, 20 test)
+
+Dosya: data/gold_questions.jsonl (Yalnızca 20 Test Sorusu - Kanonik JSON)
+SHA-256: cb3f393baa57dac4473a862225c4f26c2dcda8a8f947ee2df0b9f963f6d05d2d
+Kayıt Sayısı: 20 test sorusu (7 tekil, 6 toplama, 3 çelişki, 4 yanıtlanamaz)
+
+Dosya: data/kb_docs.jsonl (Bilgi Tabanı Belgeleri)
+SHA-256: a9e7f094e7c2b2fb2723dd43ad4b7a03cbdfe7c6cbb2e75176ceb8de7bb5f887
+Kayıt Sayısı: 153 belge
+================================================================================
+
+
+================================================================================
+DONDURMA GÜNCELLEMESİ (VERSION 1.4 FREEZE UPDATE - ADIM 9b RAG PROMPT VE k SEÇİMİ)
+================================================================================
+Dondurma Zamanı (UTC): 2026-10-23T11:54:20.387907+00:00
+Sürüm: 1.4 (Kilitli / Frozen)
+Bağlayıcı İlke: prompt varyantı ve k YALNIZ 10 dev sorusuyla seçildi; 20 test sorusu bu dondurmadan
+ÖNCE hiçbir RAG sistemiyle (R0, R1, R2) çalıştırılmadı. Test soruları dondurmadan sonra TEK KEZ çalıştırılacaktır.
+Seçilen: prompt=P1, k=5
+
+KİLİTLEYİCİ SAĞLAMA ÖZETİ (v1.4):
+--------------------------------------------------------------------------------
+Dosya: docs/rag_secim.md [KİLİTLEYİCİ HASH]
+SHA-256: 5bfd98e78f6276527b49b9cbcd3fcf086ed6e1537d6b11bd5bc640e159166972
+================================================================================

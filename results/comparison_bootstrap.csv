@@ -1,0 +1,8 @@
+Karşılaştırma,Tesis Dengeli MAE Farkı (kWp),%95 Güven Aralığı,Sıfırı İçeriyor mu?,Sonuç
+B1 − B0,-10.64,"[-22.85, +4.64]",Evet,Fark ayırt edilemedi (aralık 0'ı içeriyor)
+D1 − B1,+6.31,"[-6.77, +18.31]",Evet,Fark ayırt edilemedi (aralık 0'ı içeriyor)
+D2 − B1,+3.54,"[-8.54, +14.88]",Evet,Fark ayırt edilemedi (aralık 0'ı içeriyor)
+D3 − B1,+2.99,"[-9.46, +13.58]",Evet,Fark ayırt edilemedi (aralık 0'ı içeriyor)
+D2 − D1,-2.77,"[-16.24, +9.86]",Evet,Fark ayırt edilemedi (aralık 0'ı içeriyor)
+D3 − D1,-3.32,"[-17.74, +8.09]",Evet,Fark ayırt edilemedi (aralık 0'ı içeriyor)
+D3 − D2,-0.55,"[-8.84, +7.70]",Evet,Fark ayırt edilemedi (aralık 0'ı içeriyor)

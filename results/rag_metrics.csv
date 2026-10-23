@@ -1,0 +1,15 @@
+﻿olcut,R0,R1,R2
+doğru yanıt,3/20 = 0.150,16/20 = 0.800,17/20 = 0.850
+tekil,0/7 = 0.000,7/7 = 1.000,7/7 = 1.000
+toplama,0/6 = 0.000,3/6 = 0.500,3/6 = 0.500
+çelişki,0/3 = 0.000,2/3 = 0.667,3/3 = 1.000
+yanıtlanamaz,3/4 = 0.750,4/4 = 1.000,4/4 = 1.000
+Recall@k,uygulanamaz,1.000,1.000
+sayısal doğruluk (toplama),0/6 = 0.000,3/6 = 0.500,3/6 = 0.500
+sayısal ort. mutlak sapma (kWp),uygulanamaz,20.200,6.000
+atıf doğruluğu,uygulanamaz,0.679,0.378
+kanıt kapsamı,0.000,0.594,0.344
+doğru çekimserlik (tam biçim),3/4 = 0.750,4/4 = 1.000,4/4 = 1.000
+doğru çekimserlik (gevşek),4/4 = 1.000,4/4 = 1.000,4/4 = 1.000
+gereksiz ret,16/16 = 1.000,2/16 = 0.125,1/16 = 0.062
+H3_toplama_R2_gt_R1,,,hayır

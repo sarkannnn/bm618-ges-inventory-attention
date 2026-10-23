@@ -1,0 +1,63 @@
+[2026-10-23 11:24:51,815] [INFO] ================================================================================
+[2026-10-23 11:24:51,815] [INFO] BM618: GÖREV 1.1 — VERİ DENETİMİ VE DENETLENEBİLİR VERİ TABLOSU HESAPLAMA BAŞLADI
+[2026-10-23 11:24:51,815] [INFO] ================================================================================
+[2026-10-23 11:24:51,815] [INFO] 
+İnceleniyor: 2022-yl-kurulumu-tamamlanan-gune-enerji-sistemleri.xlsx (Dosya Yılı / Kaynak Sürümü: 2022)
+[2026-10-23 11:24:51,820] [INFO]   Dışlanan başlık/açıklama satırı sayısı: 2
+[2026-10-23 11:24:51,820] [INFO]     [Dışlandı] Satır 01: Geçersiz/Sayısal olmayan güç değeri ('Güç') - Başlık/Açıklama satırı | İçerik: ['No', 'İlçe', 'Mekan', 'Güç', 'Ölçü / Birim', 'Durum']
+[2026-10-23 11:24:51,820] [INFO]     [Dışlandı] Satır 22: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,823] [INFO]   Geçerli Tesis Kaydı: 20
+[2026-10-23 11:24:51,823] [INFO]   Benzersiz Temiz İlçe Sayısı: 15
+[2026-10-23 11:24:51,823] [INFO]   Toplam Güç: 3834.8 kWp (Medyan: 106.0, Min: 20.0, Maks: 574.2)
+[2026-10-23 11:24:51,824] [INFO]   Ham Durum Dağılımı: {'Aktif': 20}
+[2026-10-23 11:24:51,824] [INFO]   Temiz Durum Dağılımı: {'Aktif': 20}
+[2026-10-23 11:24:51,824] [INFO]   >>> 2022 YIL VERİLERİ YÖNERGE VE ÖĞRETİM NOTLARIYLA %100 DOĞRULANDI <<<
+[2026-10-23 11:24:51,824] [INFO] 
+İnceleniyor: 2023_kurulumu-tamamlanan-gune-enerji-sistemleri.xlsx (Dosya Yılı / Kaynak Sürümü: 2023)
+[2026-10-23 11:24:51,829] [INFO]   Dışlanan başlık/açıklama satırı sayısı: 11
+[2026-10-23 11:24:51,829] [INFO]     [Dışlandı] Satır 01: Geçersiz/Sayısal olmayan güç değeri ('None') - Başlık/Açıklama satırı | İçerik: [' 2023 Yılında Kurulumu Tamamlanan Güneş Enerji Sistemi (GES) Yerleri ', None, None, None, None, None]
+[2026-10-23 11:24:51,830] [INFO]     [Dışlandı] Satır 02: Geçersiz/Sayısal olmayan güç değeri ('Güç') - Başlık/Açıklama satırı | İçerik: ['No', 'İlçe', 'Mekan', 'Güç', 'Ölçü / Birim', 'Durum']
+[2026-10-23 11:24:51,830] [INFO]     [Dışlandı] Satır 03: Geçersiz/Sayısal olmayan güç değeri ('None') - Başlık/Açıklama satırı | İçerik: [None, None, None, None, None, '(Aktif / Pasif)']
+[2026-10-23 11:24:51,830] [INFO]     [Dışlandı] Satır 15: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,830] [INFO]     [Dışlandı] Satır 16: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,830] [INFO]     [Dışlandı] Satır 17: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,830] [INFO]     [Dışlandı] Satır 18: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,830] [INFO]     [Dışlandı] Satır 19: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,831] [INFO]     [Dışlandı] Satır 20: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,831] [INFO]     [Dışlandı] Satır 21: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,831] [INFO]     [Dışlandı] Satır 22: Tüm hücreler boş satır | İçerik: [None, None, None, None, None, None]
+[2026-10-23 11:24:51,832] [INFO]   Geçerli Tesis Kaydı: 11
+[2026-10-23 11:24:51,833] [INFO]   Benzersiz Temiz İlçe Sayısı: 9
+[2026-10-23 11:24:51,833] [INFO]   Toplam Güç: 984.7 kWp (Medyan: 25.0, Min: 6.6, Maks: 305.0)
+[2026-10-23 11:24:51,833] [INFO]   Ham Durum Dağılımı: {'Aktif': 11}
+[2026-10-23 11:24:51,833] [INFO]   Temiz Durum Dağılımı: {'Aktif': 11}
+[2026-10-23 11:24:51,833] [INFO]   >>> 2023 YIL VERİLERİ YÖNERGE VE ÖĞRETİM NOTLARIYLA %100 DOĞRULANDI <<<
+[2026-10-23 11:24:51,833] [INFO] 
+İnceleniyor: 2024-yl-kurulumu-tamamlanan-gune-enerji-sistemleri.xlsx (Dosya Yılı / Kaynak Sürümü: 2024)
+[2026-10-23 11:24:51,838] [INFO]   Dışlanan başlık/açıklama satırı sayısı: 2
+[2026-10-23 11:24:51,839] [INFO]     [Dışlandı] Satır 01: Geçersiz/Sayısal olmayan güç değeri ('Güç') - Başlık/Açıklama satırı | İçerik: ['İlçe', 'Mekan', 'Güç', 'Ölçü Birimi', 'Durum']
+[2026-10-23 11:24:51,839] [INFO]     [Dışlandı] Satır 48: Tüm hücreler boş satır | İçerik: [None, None, None, None, None]
+[2026-10-23 11:24:51,841] [INFO]   Geçerli Tesis Kaydı: 46
+[2026-10-23 11:24:51,841] [INFO]   Benzersiz Temiz İlçe Sayısı: 21
+[2026-10-23 11:24:51,841] [INFO]   Toplam Güç: 3887.0 kWp (Medyan: 36.0, Min: 3.0, Maks: 484.0)
+[2026-10-23 11:24:51,841] [INFO]   Ham Durum Dağılımı: {'Aktif': 45, '(Aktif / Pasif)': 1}
+[2026-10-23 11:24:51,842] [INFO]   Temiz Durum Dağılımı: {'Aktif': 45, 'Belirsiz': 1}
+[2026-10-23 11:24:51,842] [INFO]   >>> 2024 YIL VERİLERİ YÖNERGE VE ÖĞRETİM NOTLARIYLA %100 DOĞRULANDI <<<
+[2026-10-23 11:24:51,842] [INFO] 
+İnceleniyor: 2025-yl-kurulumu-tamamlanan-gune-enerji-sistemleri.xlsx (Dosya Yılı / Kaynak Sürümü: 2025)
+[2026-10-23 11:24:51,852] [INFO]   Dışlanan başlık/açıklama satırı sayısı: 2
+[2026-10-23 11:24:51,852] [INFO]     [Dışlandı] Satır 01: Geçersiz/Sayısal olmayan güç değeri ('Güç') - Başlık/Açıklama satırı | İçerik: ['İlçe', 'Mekan', 'Güç', 'Ölçü / Birim', 'Durum']
+[2026-10-23 11:24:51,853] [INFO]     [Dışlandı] Satır 02: Geçersiz/Sayısal olmayan güç değeri ('(kWp)') - Başlık/Açıklama satırı | İçerik: [None, None, '(kWp)', None, '(Aktif / Pasif)']
+[2026-10-23 11:24:51,854] [INFO]   Geçerli Tesis Kaydı: 76
+[2026-10-23 11:24:51,855] [INFO]   Benzersiz Temiz İlçe Sayısı: 34
+[2026-10-23 11:24:51,855] [INFO]   Toplam Güç: 8418.0 kWp (Medyan: 63.0, Min: 3.0, Maks: 574.0)
+[2026-10-23 11:24:51,855] [INFO]   Ham Durum Dağılımı: {'Aktif': 59, 'Pasif': 15, 'Aktif - Pasif': 2}
+[2026-10-23 11:24:51,855] [INFO]   Temiz Durum Dağılımı: {'Aktif': 59, 'Pasif': 15, 'Karma': 2}
+[2026-10-23 11:24:51,855] [INFO]   >>> 2025 YIL VERİLERİ YÖNERGE VE ÖĞRETİM NOTLARIYLA %100 DOĞRULANDI <<<
+[2026-10-23 11:24:51,858] [INFO] 
+Denetlenebilir envanter tablosu CSV olarak kaydedildi: D:\laragon\www\bm618-ges-inventory-attention\data\audited_inventory.csv
+[2026-10-23 11:24:51,858] [INFO] ================================================================================
+[2026-10-23 11:24:51,859] [INFO] GENEL ÖZET: Toplam 153 geçerli GES kaydı oluşturuldu.
+[2026-10-23 11:24:51,859] [INFO] Toplam Güç: 17124.5 kWp
+[2026-10-23 11:24:51,859] [INFO] Görev 1.1 Başarıyla Tamamlandı.
+[2026-10-23 11:24:51,859] [INFO] ================================================================================

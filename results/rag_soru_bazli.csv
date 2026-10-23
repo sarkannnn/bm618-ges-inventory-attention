@@ -1,0 +1,114 @@
+﻿soru_id,tur,sistem,dogru,recall,atif_kesinlik,kanit_kapsami,cekimser_tam,sure_sn,altin,yanit
+Q11,tekil,R0,0,,,0.0,0,5.69,106.0 kWp,"ÇEKİMSER
+
+2022 dosyasında kayıtlı Sultangazi 75. Yıl Spor Salonu GES tesisinin kurulu gücü belirtiğin belirtmediği için bilinmeyen değerdir."
+Q11,tekil,R1,1,1.0,1.0,1.0,0,8.48,106.0 kWp,"2022 | Excel satırı: 9 | İlçe: Sultangazi | Tesis: Sultangazi 75. Yıl Spor Salonu GES | Güç: 106.0 kWp
+
+Çekim: 106.0 kWp"
+Q11,tekil,R2,1,1.0,0.0,0.0,0,15.51,106.0 kWp,2022 dosyasında kayıtlı Sultangazi 75. Yıl Spor Salonu GES tesisinin kurulu gücü 106.0 kWp'dir.
+Q12,tekil,R0,0,,,0.0,1,2.65,215.0 kWp,ÇEKİMSER
+Q12,tekil,R1,1,1.0,1.0,1.0,0,8.53,215.0 kWp,"Kanıt:
+- Dosya yılı: 2022 | Excel satırı: 14 | İlçe: Şile | Tesis: Şile Engelliler Yaz Kampı GES | Güç: 215.0 kWp
+
+Çekimsel: 215.0 kWp"
+Q12,tekil,R2,1,1.0,0.0,0.0,0,8.81,215.0 kWp,215.0 kWp
+Q13,tekil,R0,0,,,0.0,1,2.95,6.6 kWp,ÇEKİMSER
+Q13,tekil,R1,1,1.0,1.0,1.0,0,8.57,6.6 kWp,2023 | Excel satırı: 11 | İlçe: Şişli | Tesis: Maçka Deprem Parkı Tuvaleti Çatısı Güneş Enerji Santrali (GES) | Güç: 6.6 kWp
+Q13,tekil,R2,1,1.0,1.0,1.0,0,13.44,6.6 kWp,2023 | Excel satırı: 11 | İlçe: Şişli | Tesis: Maçka Deprem Parkı Tuvaleti Çatısı Güneş Enerji Santrali (GES) | Güç: 6.6 kWp
+Q14,tekil,R0,0,,,0.0,1,2.88,180.0 kWp,ÇEKİMSER
+Q14,tekil,R1,1,1.0,0.5,1.0,0,15.35,180.0 kWp,"2024 | Excel satırı: 5 | İlçe: Bahçelievler | Tesis: Dr. Enver Ören Kültür Merkezi Çatısı Güneş Enerji Santrali | Güç: 180.0 kWp
+
+2024 | Excel satırı: 43 | İlçe: Şile | Tesis: Kültür Merkezi Çatısı Güneş Enerji Santrali | Güç: 157.0 kWp
+
+Çekimseniz, 2024 yılında Bahçelievler'de Dr. Enver Ören Kültür Merkezi Çatısı Güneş Enerji Santrali tesisinin kurulu gücü 180.0 kWp'dir."
+Q14,tekil,R2,1,1.0,0.0,0.0,0,10.52,180.0 kWp,180.0 kWp
+Q15,tekil,R0,0,,,0.0,1,2.87,149.0 kWp,ÇEKİMSER
+Q15,tekil,R1,1,1.0,1.0,1.0,0,9.27,149.0 kWp,"2024 | Excel satırı: 23 | İlçe: Kartal | Tesis: Bülent Ecevit Kültür Merkezi Çatısı Güneş Enerji Santrali | Güç: 149.0 kWp
+
+Çekimsen: 149.0 kWp"
+Q15,tekil,R2,1,1.0,1.0,1.0,0,14.71,149.0 kWp,"2024 | Excel satırı: 23 | İlçe: Kartal | Tesis: Bülent Ecevit Kültür Merkezi Çatısı Güneş Enerji Santrali | Güç: 149.0 kWp
+
+Çekimseniz: 149.0 kWp"
+Q16,tekil,R0,0,,,0.0,1,2.86,458.0 kWp,ÇEKİMSER
+Q16,tekil,R1,1,1.0,1.0,1.0,0,8.93,458.0 kWp,"2024 | Excel satırı: 46 | İlçe: Tuzla | Tesis: Bahar Merkezi Çatısı Güneş Enerji Santrali | Güç: 458.0 kWp
+
+Çekimsel: 458.0 kWp"
+Q16,tekil,R2,1,1.0,0.0,0.0,0,11.75,458.0 kWp,2024 dosyasında Tuzla Bahar Merkezi Çatısı Güneş Enerji Santrali tesisinin kurulu gücü 458.0 kWp'dir.
+Q24,tekil,R0,0,,,0.0,1,2.8,99.0 kWp,ÇEKİMSER
+Q24,tekil,R1,1,1.0,1.0,1.0,0,8.03,99.0 kWp,"2022 | Excel satırı: 12 | İlçe: Başakşehir | Tesis: Engelliler Merkezi 1. Etap GES | Güç: 99.0 kWp
+
+Çekim: 99.0 kWp"
+Q24,tekil,R2,1,1.0,0.0,0.0,0,9.31,99.0 kWp,99.0 kWp
+Q17,toplama,R0,0,,,0.0,1,2.92,13.2 kWp,ÇEKİMSER
+Q17,toplama,R1,1,1.0,0.0,0.0,0,16.23,13.2 kWp,"2023 dosyasında Şişli ve Zeytinburnu ilçelerindeki deprem parkı tuvalet çatısı GES tesislerinin toplam kurulu gücü 13.2 kWp'dir. 
+
+Çelişki: Verilen kanıta göre, Şişli ilçesindeki Maçka Deprem Parkı Tuvaleti Çatısı Güneş Enerji Santrali (GES) tesisinin gücü 6.6 kWp, Zeytinburnu ilçesindeki Topkapı Deprem Parkı Tuvaleti Çatısı Güneş Enerji Santrali (GES) tesisinin gücü de 6.6 kWp'dir. Bu iki değerin toplamı 13.2 kWp'dir."
+Q17,toplama,R2,0,1.0,,0.0,1,9.24,13.2 kWp,ÇEKİMSER
+Q18,toplama,R0,0,,,0.0,0,5.25,62.0 kWp,"ÇEKİMSER
+
+2024 dosyasında Beykoz ilçesinde kayıtlı GES tesislerinin toplam kurulu gücü belirtiğimiz kanıta dayanamamam."
+Q18,toplama,R1,0,1.0,,0.0,1,5.24,62.0 kWp,ÇEKİMSER
+Q18,toplama,R2,0,1.0,1.0,1.0,0,19.4,62.0 kWp,"2024 dosyasında Beykoz ilçesinde kayıtlı GES tesislerinin toplam kurulu gücü 52.0 kWp'dir. 
+
+Kanıt:
+- Dosya yılı: 2024 | Excel satırı: 8 | İlçe: Beykoz | Tesis: İBB Bozhane İtfaiye Bina Çatısı Güneş Enerji Santrali | Güç: 29.0 kWp
+- Dosya yılı: 2024 | Excel satırı: 9 | İlçe: Beykoz | Tesis: İBB Çavuşbaşı İtfaiye Bina Çatısı Güneş Enerji Santrali | Güç: 33.0 kWp"
+Q19,toplama,R0,0,,,0.0,1,2.81,43.0 kWp,ÇEKİMSER
+Q19,toplama,R1,0,1.0,1.0,1.0,0,16.38,43.0 kWp,"2024 dosyasında Büyükçekmece ilçesinde kayıtlı Mimar Sinan ve Büyükçekmece İtfaiye GES tesislerinin toplam kurulu gücü 126.0 kWp'dir. 
+
+Kanıt:
+- Dosya yılı: 2024 | Excel satırı: 12 | İlçe: Büyükçekmece | Tesis: İBB Mimar Sinan İtfaiye Bina Çatısı Güneş Enerji Santrali | Güç: 23.0 kWp
+- Dosya yılı: 2024 | Excel satırı: 11 | İlçe: Büyükçekmece | Tesis: İBB Büyükçekmece İtfaiye Bina Çatısı Güneş Enerji Santrali | Güç: 20.0 kWp"
+Q19,toplama,R2,0,1.0,0.6666666666666666,1.0,0,27.63,43.0 kWp,"2024 dosyasında Büyükçekmece ilçesinde kayıtlı Mimar Sinan ve Büyükçekmece İtfaiye GES tesislerinin toplam kurulu gücü 129.0 kWp'dir. 
+
+Bu sonuç, aşağıdaki kayıtlardan elde edilmiştir:
+- Dosya yılı: 2024 | Excel satırı: 10 | İlçe: Büyükçekmece | Tesis: İBB Kumburgaz İtfaiye Bina Çatısı Güneş Enerji Santrali | Güç: 106.0 kWp
+- Dosya yılı: 2024 | Excel satırı: 11 | İlçe: Büyükçekmece | Tesis: İBB Büyükçekmece İtfaiye Bina Çatısı Güneş Enerji Santrali | Güç: 20.0 kWp
+- Dosya yılı: 2024 | Excel satırı: 12 | İlçe: Büyükçekmece | Tesis: İBB Mimar Sinan İtfaiye Bina Çatısı Güneş Enerji Santrali | Güç: 23.0 kWp"
+Q20,toplama,R0,0,,,0.0,1,3.0,62.0 kWp,ÇEKİMSER
+Q20,toplama,R1,1,1.0,0.0,0.0,0,9.53,62.0 kWp,"29.0 kWp + 33.0 kWp = 62.0 kWp
+
+2024 yılında Kartal ilçesinde kayıtlı Yakacık İtfaiye ve Soğanlık Gasilhane bina çatısı GES tesislerinin toplam gücü 62.0 kWp'dir."
+Q20,toplama,R2,1,1.0,0.0,0.0,0,13.7,62.0 kWp,2024 dosyasında Kartal ilçesinde kayıtlı Yakacık İtfaiye ve Soğanlık Gasilhane bina çatısı GES tesislerinin toplam gücü 62.0 kWp'dir.
+Q21,toplama,R0,0,,,0.0,1,2.76,179.0 kWp,ÇEKİMSER
+Q21,toplama,R1,1,1.0,0.0,0.0,0,7.57,179.0 kWp,2022 dosyasında Başakşehir Engelliler Merkezi 1. Etap GES ve 2. Etap GES tesislerinin toplam kurulu gücü 179.0 kWp'dir.
+Q21,toplama,R2,1,1.0,0.0,0.0,0,12.37,179.0 kWp,2022 dosyasında Başakşehir Engelliler Merkezi 1. Etap GES ve 2. Etap GES tesislerinin toplam kurulu gücü 179.0 kWp'dir.
+Q22,toplama,R0,0,,,0.0,1,3.05,156.0 kWp,ÇEKİMSER
+Q22,toplama,R1,0,1.0,0.0,0.0,0,6.01,156.0 kWp,78.0 kWp | 78.0 kWp
+Q22,toplama,R2,1,1.0,0.0,0.0,0,14.89,156.0 kWp,2024 dosyasında Eyüpsultan ilçesinde kayıtlı Tevfik Aydeniz Spor Kompleksi ve Yeşilpınar Kapalı Yüzme Havuzu GES tesislerinin toplam kurulu gücü 156.0 kWp'dir.
+Q23,çelişki,R0,0,,,0.0,1,2.86,ÇELİŞKİ: Florya Atatürk Kent Ormanı tesisi 2022 dosyasında 20.0 kWp (REC_2022_R02) kayıtlıyken 2024 dosyasında 7.0 kWp (REC_2024_R07) olarak bildirilmiştir.,ÇEKİMSER
+Q23,çelişki,R1,1,1.0,1.0,1.0,0,13.71,ÇELİŞKİ: Florya Atatürk Kent Ormanı tesisi 2022 dosyasında 20.0 kWp (REC_2022_R02) kayıtlıyken 2024 dosyasında 7.0 kWp (REC_2024_R07) olarak bildirilmiştir.,"Florya Atatürk Kent Ormanı yerleşkesi için 2022 ve 2024 dosyalarındaki kayıtlarda ad ve kurulu güç açısından aşağıdaki farklılık bulunmaktadır:
+
+- Dosya yılı: 2022 | Excel satırı: 2 | İlçe: Bakırköy | Tesis: İstanbul Planlama Ajansı (İPA - Florya Atatürk Kent Ormanı) GES | Güç: 20.0 kWp
+- Dosya yılı: 2024 | Excel satırı: 7 | İlçe: Bakırköy | Tesis: Florya Atatürk Kent Ormanı Güneş Enerji Santrali | Güç: 7.0 kWp"
+Q23,çelişki,R2,1,1.0,1.0,1.0,0,17.06,ÇELİŞKİ: Florya Atatürk Kent Ormanı tesisi 2022 dosyasında 20.0 kWp (REC_2022_R02) kayıtlıyken 2024 dosyasında 7.0 kWp (REC_2024_R07) olarak bildirilmiştir.,"Florya Atatürk Kent Ormanı yerleşkesi için 2022 ve 2024 dosyalarındaki kayıtlarda ad ve kurulu güç açısından aşağıdaki farklılık bulunmaktadır:
+
+- Dosya yılı: 2022 | Excel satırı: 2 | İlçe: Bakırköy | Tesis: İstanbul Planlama Ajansı (İPA - Florya Atatürk Kent Ormanı) GES | Güç: 20.0 kWp
+- Dosya yılı: 2024 | Excel satırı: 7 | İlçe: Bakırköy | Tesis: Florya Atatürk Kent Ormanı Güneş Enerji Santrali | Güç: 7.0 kWp"
+Q25,çelişki,R0,0,,,0.0,1,2.98,ÇELİŞKİ: Yakacık İtfaiye tesisi 2024 dosyasında 33.0 kWp (REC_2024_R24) kayıtlıyken 2025 dosyasında 29.0 kWp (REC_2025_R42) olarak daha düşük bir güçle kaydedilmiştir.,ÇEKİMSER
+Q25,çelişki,R1,0,1.0,,0.0,1,5.37,ÇELİŞKİ: Yakacık İtfaiye tesisi 2024 dosyasında 33.0 kWp (REC_2024_R24) kayıtlıyken 2025 dosyasında 29.0 kWp (REC_2025_R42) olarak daha düşük bir güçle kaydedilmiştir.,ÇEKİMSER
+Q25,çelişki,R2,1,1.0,0.0,0.0,0,11.89,ÇELİŞKİ: Yakacık İtfaiye tesisi 2024 dosyasında 33.0 kWp (REC_2024_R24) kayıtlıyken 2025 dosyasında 29.0 kWp (REC_2025_R42) olarak daha düşük bir güçle kaydedilmiştir.,"Çelişkili değerler: 
+
+- 2024 yılında: 33.0 kWp
+- 2025 yılında: 29.0 kWp"
+Q26,çelişki,R0,0,,,0.0,0,5.54,"ÇELİŞKİ: 2024 yılı Excel belgesinde 13. satırda (REC_2024_R13) 29.0 kWp, 15. satırda (REC_2024_R15) 25.0 kWp olarak kaydedilmiş olup aynı yıl içinde çelişki mevcuttur.","ÇEKİMSER
+
+Dosya Yılı: 2024
+
+Excel Satırı: Çekmeköy Ömerli İtfaiye GES tesisinin resmi Excel belgesinde güç değerleri belirtilmemiştir."
+Q26,çelişki,R1,1,1.0,1.0,0.5,0,8.59,"ÇELİŞKİ: 2024 yılı Excel belgesinde 13. satırda (REC_2024_R13) 29.0 kWp, 15. satırda (REC_2024_R15) 25.0 kWp olarak kaydedilmiş olup aynı yıl içinde çelişki mevcuttur.",2024 dosyasında Çekmeköy Ömerli İtfaiye GES tesisinin resmi Excel belgesindeki 13. ve 15. satırlarındaki güç değerleri 29.0 kWp ve 25.0 kWp'dir.
+Q26,çelişki,R2,1,1.0,1.0,0.5,0,13.4,"ÇELİŞKİ: 2024 yılı Excel belgesinde 13. satırda (REC_2024_R13) 29.0 kWp, 15. satırda (REC_2024_R15) 25.0 kWp olarak kaydedilmiş olup aynı yıl içinde çelişki mevcuttur.",2024 dosyasında Çekmeköy Ömerli İtfaiye GES tesisinin resmi Excel belgesindeki 13. ve 15. satırlarındaki güç değerleri 29.0 kWp ve 25.0 kWp'dir.
+Q27,yanıtlanamaz,R0,1,,,,1,2.73,ÇEKİMSER,ÇEKİMSER
+Q27,yanıtlanamaz,R1,1,,,,1,4.88,ÇEKİMSER,ÇEKİMSER
+Q27,yanıtlanamaz,R2,1,,,,1,8.29,ÇEKİMSER,ÇEKİMSER
+Q28,yanıtlanamaz,R0,1,,,,1,2.83,ÇEKİMSER,ÇEKİMSER
+Q28,yanıtlanamaz,R1,1,,,,1,5.18,ÇEKİMSER,ÇEKİMSER
+Q28,yanıtlanamaz,R2,1,,,,1,8.08,ÇEKİMSER,ÇEKİMSER
+Q29,yanıtlanamaz,R0,0,,,,0,4.82,ÇEKİMSER,"ÇEKİMSER
+
+2024 dosyasında Adalar ilçesinde kayıtlı GES tesislerinin adları ve kurulu güçleri belirtiye yaramaz."
+Q29,yanıtlanamaz,R1,1,,,,1,5.16,ÇEKİMSER,ÇEKİMSER
+Q29,yanıtlanamaz,R2,1,,,,1,7.99,ÇEKİMSER,ÇEKİMSER
+Q30,yanıtlanamaz,R0,1,,,,1,2.7,ÇEKİMSER,ÇEKİMSER
+Q30,yanıtlanamaz,R1,1,,,,1,5.14,ÇEKİMSER,ÇEKİMSER
+Q30,yanıtlanamaz,R2,1,,,,1,7.49,ÇEKİMSER,ÇEKİMSER

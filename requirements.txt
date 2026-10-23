@@ -1,0 +1,11 @@
+# BM618: Az Verili GES Envanterinde Attention, Transformer ve Kanıta Dayalı LLM
+# Python versiyası: 3.14.2
+# Yalnız src/ və tests/ qovluqlarında faktiki istifadə olunan kitabxanalar
+
+numpy==2.5.4
+pandas==3.0.6
+scikit-learn==1.9.1
+scipy==1.18.1
+torch==2.14.1
+openpyxl==3.1.5
+requests==2.34.2
