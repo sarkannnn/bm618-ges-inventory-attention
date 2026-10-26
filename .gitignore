@@ -8,6 +8,9 @@
 *.doc
 docs/*.docx
 docs/*.doc
+rapor/
+*.docx
+*.doc
 
 # Python bytecode, keş və ilkləndirmə
 __pycache__/
